@@ -12,14 +12,17 @@ The research is done with the following processes:
 - Analyze the sentiments with and without stop words using VADER.
 
 **Data Collection**
+
 The data are retrieved from YouTube Data API. 200 comments are retrieved from 2 Youtube trending videos in the United States ---
 1.  *Paddington Bear joins the Queen for afternoon tea at Buckingham Palace*
 2.  *Details emerge about suspected gunman after Texas shooting l GMA.*
 
 **Data Pre-processing**
+
 The unprocessed comments are tangled. Thus, we processed them by removing null values, special characters, stop words and converting them into lower cases. After the preprocessing of data, we begin our analysis.
 
 **Scoring with VADER**
+
 As previously mentioned, the lexicon list organized by VADER is also validated by humans. According to the developer of VADER, the human raters are all "pre-screened and trained" (Hutto & Gilbert, 2014) They independently rated a word's sentiment on the scale from -4 to +4. In this case, -4 represents "Extremely Negative", +4 means "Extremely Positive", and 0 stands for "Neutral". There is also a compound score in VADER. It is the sum of the scores, and further normalized to between -1 and 1. The polarity is then defined ---
 - positive sentiment: compound score >= 0.05
 - neutral sentiment: compound score > -0.05 and compound score < 0.05
@@ -55,13 +58,13 @@ negative  3                 negative  2
 neutral   3                 neutral   3
 Name: Polarity              Name: polarity (without stopwords)
 ```
-*Fig. 2 Polarity Frequencies of Comments with and without stop words.*
+<sup>*Fig. 2 Polarity Frequencies of Comments with and without stop words.*</sup>
 
 ![](https://github.com/chiaszu/youtube-comments-sentiment-analysis/blob/main/img/fig.2-1.jpg?raw=true)
-*Fig. 2-1 Mismatched Polarity of the Paddington Bear Joins the Queen Video.*
+<sup>*Fig. 2-1 Mismatched Polarity of the Paddington Bear Joins the Queen Video.*</sup>
 
 ![](https://github.com/chiaszu/youtube-comments-sentiment-analysis/blob/main/img/fig.2-2.jpg?raw=true)
-*Fig. 2-2 Negative Comments of the Paddington Bear Joins the Queen Video.*
+<sup>*Fig. 2-2 Negative Comments of the Paddington Bear Joins the Queen Video.*</sup>
 
 From *Fig. 2,* we conclude that the *Paddington Bear joins the Queen* video receives mostly positive feedback, with 94% and 95% positive comments. The significant difference in polarity made the negative comments completely distinct. *Fig. 2-2* shows the comments that are labeled as negative.
 
@@ -89,18 +92,12 @@ Bonta, V., Kumaresh, N., & Janardhan, N. (2019). A Comprehensive Study on Lexico
 
 Bird, S., Klein, E., & Loper, E. (2009). *Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit* (1st ed.). O'Reilly Media.
 
-Tausczik, Y. R., & Pennebaker, J. W. (2009). The Psychological Meaning of Words: LIWC 
+Tausczik, Y. R., & Pennebaker, J. W. (2009). The Psychological Meaning of Words: LIWC and Computerized Text Analysis Methods. *Journal of Language and Social Psychology*, *29*(1), 24--54. https://doi.org/10.1177/0261927x09351676
 
-and Computerized Text Analysis Methods. *Journal of Language and Social Psychology*, *29*(1), 24--54. https://doi.org/10.1177/0261927x09351676
+*TextBlob: Simplified Text Processing --- TextBlob 0.16.0 documentation*. (2018). Steven Loria. https://textblob.readthedocs.io/en/dev/
 
-*TextBlob: Simplified Text Processing --- TextBlob 0.16.0 documentation*. (2018). Steven Loria. 
+Hutto, C., & Gilbert, E. (2014). VADER: A Parsimonious Rule-Based Model for Sentiment Analysis of Social Media Text. *Proceedings of the International AAAI Conference on **Web and Social Media*, *8*(1), 216-225. Retrieved from https://ojs.aaai.org/index.php/ICWSM/article/view/14550
 
-https://textblob.readthedocs.io/en/dev/
+Beri, A. (2021, December 14). SENTIMENTAL ANALYSIS USING VADER - Towards Data Science. Medium. https://towardsdatascience.com/sentimental-analysis-using-vader-a3415fef7664
 
-Hutto, C., & Gilbert, E. (2014). VADER: A Parsimonious Rule-Based Model for Sentiment 
-
-Analysis of Social Media Text. *Proceedings of the International AAAI Conference on *
-
-*Web and Social Media*, *8*(1), 216-225. Retrieved from 
-
-https://ojs.aaai.org/index.php/ICWSM/article/view/14550
+Ranjan, A. (2021, December 23). Sentiment Analysis of a Youtube Video - Analytics Vidhya. Medium. https://medium.com/analytics-vidhya/sentiment-analysis-of-a-youtube-video-63ced6b7b1c4
