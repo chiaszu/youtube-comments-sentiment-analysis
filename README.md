@@ -46,7 +46,7 @@ Name: Polarity              Name: polarity (without stopwords)
 ```
 <sup>*Fig. 1 Polarity Frequencies of Comments with and without stop words.* </sup>
 
-From*Fig. 1*, we conclude that 68% and 65% are negative comments, depending on the existence of the stop words. The data also indicates that the mismatches are possibly caused by them.
+From *Fig. 1*, we conclude that 68% and 65% are negative comments, depending on the existence of the stop words. The data also indicates that the mismatches are possibly caused by them.
 ![](https://github.com/chiaszu/youtube-comments-sentiment-analysis/blob/main/img/fig.1-1.jpg?raw=true)
 <sup>*Fig. 1-1 Mismatched Polarity of the Texas Shooting Video*</sup>
 
